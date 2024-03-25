@@ -43,7 +43,8 @@ class TvShows extends StatelessWidget {
                                   launch_on: tv[index]['release_date'].toString())));
 
                     },
-                    child: Container(
+                    child: 
+                    tv[index]['title']!=null? Container(
                       padding: EdgeInsets.all(5),
                       width: 250,
                       child: Column(
@@ -70,7 +71,7 @@ class TvShows extends StatelessWidget {
                           )
                         ],
                       ),
-                    ),
+                    ):Container(),
                   );
                 }),
           )

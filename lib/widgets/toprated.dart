@@ -42,7 +42,8 @@ class TopRated extends StatelessWidget {
                                   vote: toprated[index]['vote_average'].toString(),
                                   launch_on: toprated[index]['release_date'].toString())));
                     },
-                    child: Container(
+                    child: 
+                   toprated[index]['title']!=null? Container(
                       width: 140,
                       child: Column(
                         children: [
@@ -61,7 +62,7 @@ class TopRated extends StatelessWidget {
                           )
                         ],
                       ),
-                    ),
+                    ):Container(),
                   );
                 }),
           )
